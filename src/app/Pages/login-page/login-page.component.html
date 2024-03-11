@@ -1,0 +1,29 @@
+<div class="row">
+    <div>
+        
+        <div *ngIf="temErro">
+            {{erro}}
+        </div>
+        <div *ngIf="estaCarregando">
+            <app-loading-spinner></app-loading-spinner>
+        </div>
+        <form #autenticaForm="ngForm" (ngSubmit)="onSubmit(autenticaForm)" *ngIf="!estaCarregando">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" ngModel email required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" ngModel minlength="6"
+                    required>
+            </div>
+            <div>
+                <button class="btn-loginpage" type="submit" [disabled]="!autenticaForm.valid">{{modoLogin ? 'Login' :
+                    'Inscrever-se'}}</button>
+                <button class="btn-loginpage" (click)="onTrocarModo()" type="button">{{ modoLogin ? 'Inscrever-se':
+                    'Login' }}</button>
+            </div>
+            <img src="../../assets/home-img.jpg" alt="">
+        </form> 
+    </div>
+</div>

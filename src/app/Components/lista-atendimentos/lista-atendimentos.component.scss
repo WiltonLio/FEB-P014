@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.tickets-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.tickets-table th,
+.tickets-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.tickets-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.tickets-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.delete-all button {
+  background-color: #fdfdfd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.tickets-table button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.tickets-table button:hover {
+  background-color: #45a049;
+}
+
+.container-button {
+  display: flex;
+  justify-content: center;
+
+}

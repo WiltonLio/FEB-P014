@@ -1,0 +1,26 @@
+<form [formGroup]="formAtendimento" (ngSubmit)="onSubmit()">
+
+    <label for="dateAtendimento">Data do Atendimento:</label>
+    <input type="date" id="dateAtendimento" formControlName="dateAtendimento">
+
+    <label for="tutorName">Nome do Tutor:</label>
+    <input id="tutorName" formControlName="tutorName">
+
+    <label for="petName">Nome do Pet:</label>
+    <input id="petName" formControlName="petName">
+
+    <label for="especie">Especie do Pet:</label>
+    <select name="especie" id="especie" formControlName="especie">
+        <option value="dog">Cachorro</option>
+        <option value="cat">Gato</option>
+        <option value="other">Outro</option>
+    </select>
+    
+    <label for="race">Raça do pet:</label>
+    <input id="race" formControlName="race">
+
+    <label for="obs">Observações</label>
+    <input id="obs" formControlName="obs">
+
+    <button type="submit">Enviar Cadastro</button>
+</form>
